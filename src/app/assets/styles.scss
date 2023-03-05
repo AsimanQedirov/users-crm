@@ -1,0 +1,75 @@
+/*--- colors --*/
+$secondary: rgb(243, 243, 243);
+/*--- box models --*/
+$padding: 10px;
+
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.app {
+  padding: $padding;
+}
+
+.users {
+  &__add-user {
+    display: flex;
+    justify-content: space-between;
+    background: $secondary;
+    padding: $padding;
+    border-radius: 5px;
+
+    & :nth-child(-n+1) {
+      max-width: 400px !important;
+    }
+
+    &__form {
+      div {
+        margin: 10px 0;
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: end;
+        border-top: 1px solid $secondary;
+        padding-top: $padding;
+      }
+    }
+  }
+
+  &__edit {
+    padding: $padding;
+
+    &__back-button {
+      display: flex;
+      justify-content: end;
+      margin-bottom: 15px;
+    }
+
+    &__form {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+  }
+}
+
+.user-table {
+  width: 100%;
+  background: $secondary;
+  margin-top: 15px;
+
+  &__action-buttons {
+    button {
+      margin-right: 10px;
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+}
